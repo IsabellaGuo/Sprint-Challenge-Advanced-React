@@ -2,6 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 
 import PlayerList from './Components/PlayerList';
+import SearchForm from './Components/SearchForm';
 
 import './App.css';
 
@@ -30,6 +31,11 @@ class App extends React.Component{
   render(){
     return(
     <div className = "App">
+      <SearchForm
+          data={this.state.data}
+          name={this.state.name}
+          country={this.state.country}
+        />
       <PlayerList
        data={this.state.dat}
        name={this.state.name}

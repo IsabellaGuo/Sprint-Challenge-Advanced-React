@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 import Player from "./player";
-
 
 class PlayerList extends React.Component{
     render(props){
-          return(
-
+        return(
             <div className = "playerList">
                 {this.props.data.map(player =>{
                     return(
-                        <Player
+                        <Player 
                             key={player.name}
                             name={player.name}
                             country={player.country}
@@ -17,7 +15,7 @@ class PlayerList extends React.Component{
                     );
                 })}
             </div>
-       );
+        );
     }
 }
 
