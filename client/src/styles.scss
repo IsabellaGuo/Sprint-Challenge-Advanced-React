@@ -1,0 +1,91 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    
+  }
+  
+  * {
+    box-sizing: border-box;
+    
+  }
+  
+  html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    margin:100px;
+   
+  }
+  
+  .navbar {
+    align-items: center;
+    border-bottom: 1px solid rgb(221, 139, 31);
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+    padding: 0 10%;
+    width: 100%;
+   
+    -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+    box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  }
+  
+  .cards {
+    display: flex;
+    
+    border: 1px dashed whitesmoke;
+    width: 30vw;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    border:2px solid black;
+    margin:100px;
+    box-shadow: 0 30px 20px -2px cadetblue;
+  }
+  h4{
+      
+      padding:50px;
+     
+  }
+  
+  #root div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dark-mode__toggle {
+    background: pink;
+    border-radius: 50px;
+    border: 3px solid black;
+    height: 107px;
+    position: relative;
+    width: 250px;
+  }
+  
+  .toggle {
+    background: #f68819;
+    border-radius: 50px;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    transition: 0.2s;
+    width: 150px;
+   
+  }
+  
+  .toggled {
+    left: 50px;
+  }
+  
+  .dark-mode {
+    color: rgb(233, 118, 10);
+    background-color: #313843;
+    .navbar {
+      background-color: #1F2022;
+      border: none;
+  
+    }
+  }
+

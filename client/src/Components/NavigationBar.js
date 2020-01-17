@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useDarkMode } from '../hooks/useDarkMode';
 
 const NavigationBar = () => {
@@ -11,7 +11,7 @@ const NavigationBar = () => {
       <nav className="nav">
         <h1>Women's World Cup</h1>
         <div className="dark-mode__toggle">
-          <div
+          <button
             onClick={toggleMode}
             className={darkMode ? 'toggle toggled' : 'toggle'}
           />
