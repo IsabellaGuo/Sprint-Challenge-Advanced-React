@@ -1,51 +1,45 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
-import PlayerList from './Components/PlayerList';
-import SearchForm from './Components/SearchForm';
+
+
 
 import './App.css';
 
 class App extends React.Component{
   constructor(){
-    super();
-    this.state = {
-      data: [],
-      name: "",
-      country: "",
-    };
+    super ();
+    this.state ={
+      players: [],
+    }
   }
-
-  componentDidMount(){
-    Axios
-    .get("http://localhost:5000/api/players")
-    .then(response=>{
-      this.setState({
-        data: response.data,
-        name: response.data.name,
-        country: response.data.country
-      });
-    })
-    .catch (error => console.log("Not found"))
-  }
-  render(){
-    return(
-    <div className = "App">
-      <SearchForm
-          data={this.state.data}
-          name={this.state.name}
-          country={this.state.country}
+    componentDidMount () {
+      axios
+      .get('http://localhost:5000/api/players')
+      .then(response => {
+        console.log("data",response)
+        this.setState ({
+          players: response.data
+        })
+  
+        })
+        .catch (error =>{
+          console.log("Data not received", error)
+      })
+    }
+    render () {
+  return (
+    <div >
+     <NavigationBar />
+       {this.state.players.map (player => (
+        <PlayerCard key={player.id} name={player.name}
+        country= {player.country}
         />
-      <PlayerList
-       data={this.state.dat}
-       name={this.state.name}
-       country={this.state.country}
-       />
-      
+    ))}
+
     </div>
-    );
+  );
   }
 }
-
 
 export default App;
