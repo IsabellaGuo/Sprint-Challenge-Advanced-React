@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    
     "axios": "^0.19.1",
     "node-sass": "^4.13.1",
     "react": "^16.9.0",
@@ -32,6 +31,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^6.11.0",
     "@testing-library/react": "^9.4.0",
     "jest": "^24.9.0"
   }

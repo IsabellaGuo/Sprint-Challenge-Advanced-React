@@ -10,8 +10,8 @@ const NavigationBar = () => {
     return (
       <nav className="nav">
         <h1>Women's World Cup</h1>
-        <div className="dark-mode__toggle">
-          <button
+        <div className="dark-mode__toggle" data-testid="toggle-element">
+          <div
             onClick={toggleMode}
             className={darkMode ? 'toggle toggled' : 'toggle'}
           />
