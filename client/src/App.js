@@ -1,6 +1,8 @@
 import React from 'react';
 import Axios from 'axios';
 
+import PlayerList from './Components/PlayerList';
+
 import './App.css';
 
 class App extends React.Component{
@@ -26,9 +28,16 @@ class App extends React.Component{
     .catch (error => console.log("Not found"))
   }
   render(){
+    return(
     <div className = "App">
+      <PlayerList
+       data={this.state.dat}
+       name={this.state.name}
+       country={this.state.country}
+       />
       
     </div>
+    );
   }
 }
 
