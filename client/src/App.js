@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
-
+import{PlayerCard} from './Components/PlayerCard';
+import NavigationBar  from './Components/NavigationBar';
 
 
 import './App.css';
@@ -24,12 +25,12 @@ class App extends React.Component{
   
         })
         .catch (error =>{
-          console.log("Data not received", error)
+          console.log("error", error)
       })
     }
     render () {
   return (
-    <div >
+    <div>
      <NavigationBar />
        {this.state.players.map (player => (
         <PlayerCard key={player.id} name={player.name}
